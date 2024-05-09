@@ -1,0 +1,9 @@
+<app-navbar [titulo]="'buscadorde noticias actuales'"></app-navbar>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
+      <app-noticias [listNoticias]="listNoticias"></app-noticias>
+    </div>
+  </div>
+</div>

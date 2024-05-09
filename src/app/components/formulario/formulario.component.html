@@ -1,0 +1,26 @@
+<div class="card text-white bg-primary mb-3">
+    <div class="card-header">Angular Edward garcia</div>
+    <div class="card-body">
+     <h2 class="heading">filtrar por categoria y pais</h2>
+     <div class="row">
+        <div class="col-8 offset-2">
+            <form (ngSubmit)="buscarNoticia()">
+                <div class="form-group">
+                    <select name="categorias" [(ngModel)]="categoriaSeleccionada" class="form-select form-control-lg">
+                      <option *ngFor="let categoria of categorias" [value]="categoria.value">{{categoria.nombre}}</option>
+                    </select>
+
+                    <div class="form-group mt-2">
+                        <select name="paises" [(ngModel)]="paisSeleccionado" class="form-select form-control-lg">
+                          <option *ngFor="let pais of paises" [value]="pais.value">{{pais.nombre}}</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="d-grid gap-2 mt-2">
+                    <button type="submit" class="btn btn-lg btn-success">buscar</button>
+                  </div>
+            </form>
+        </div>
+     </div>
+    </div>
+  </div>
